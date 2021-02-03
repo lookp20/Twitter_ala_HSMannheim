@@ -2,8 +2,42 @@
 
 {% block content %}
     <p></p></br>
-    <h1>{% block title %} Let's create a Tweet{% endblock %}</h1>
+    <h1>{% block title %} Show me my Tweets{% endblock %}</h1>
     <p></p></br>
+
+
+    
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col"> </th>
+            <th scope="col">{{Name}}</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th scope="row">Content</th>
+            <td>{{content}}</td>   
+        </tr>
+        <tr>     
+            <th scope="row">Likes</th>
+            <td>{{Likes}}</td> 
+        </tr> 
+        <tr>  
+            <th scope="row">Shares</th>
+            <td>{{Shares}}</td>
+        </tr> 
+        <tr>
+            <th scope="row">Date</th>
+            <td colspan="2">{{DateTime}}</td>
+        </tr> 
+        </tbody>
+    </table>
+
+    
+
+    
 
 
 

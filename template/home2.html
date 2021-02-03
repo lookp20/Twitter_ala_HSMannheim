@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <p></p></br>
+    <h1>{% block title %} Willkommen beim Zwitschern {% endblock %}</h1>
+    <p></p></br>
+    
+    <form action="/" method="POST">
+        <input name="text">
+        <input type="submit">
+        <div class="w-25 p-2">
+            <div class="alert alert-warning alert-dismissible fade show " role="alert"> 
+                {{msg}}
+                <button type="button" class="close-sm" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        </div>
+    </form>
+
+
+
+{% endblock %}

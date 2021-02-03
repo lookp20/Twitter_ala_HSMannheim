@@ -5,7 +5,26 @@
     <h1>{% block title %} Dies sind deine Follower und Follows{% endblock %}</h1>
     <p></p></br>
 
+    <button type="button" class="btn btn-primary" style="float:left;display:inline">
+        Follower <span class="badge bg-secondary">{{Count_Follower}}</span>
+    </button>
 
+    <form action="/text" method="get" style="float:left;display:inline">
+    {% for item1 in list1 %}
+    <p> {{ item1 }} </p>
+    {% endfor %}
+    </form>
 
+    <button type="button" class="btn btn-primary" style="float:right;display:inline">
+        Following <span class="badge bg-secondary">{{Count_Following}}</span>
+    </button>
 
+    <form action="/text" method="get" style="float:right;display:inline">
+    {% for item2 in list2 %}
+    <p> {{ item2 }} </p>
+    {% endfor %}
+    </form>
+        
+
+    
 {% endblock %}
