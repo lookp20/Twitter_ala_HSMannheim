@@ -11,7 +11,7 @@ print("Lade Daten ... \n")
 with open(path) as jsonfile:
     read_file = json.load(jsonfile)
 
-# read_file_copy = read_file[:2]
+read_file_copy = read_file[:10]
 
 print("Daten sind geladen ...\n")
 print("Beginne LogIn in Kafka ...\n")
@@ -19,7 +19,7 @@ logging.basicConfig(level=logging.INFO)
 
 producer = KafkaProducer(bootstrap_servers='localhost:9092', value_serializer=lambda x:json.dumps(x).encode("utf-8"))
 print("Starte Datenübermittlung ...\n")
-for item in tqdm(read_file):
+for item in tqdm(read_file_copy):
     producer.send('promi_tweets', item)
 print("Datenübermittlung abgeschlossen ...")
 # print(read_file_copy)

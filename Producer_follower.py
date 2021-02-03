@@ -14,7 +14,6 @@ with open(path) as jsonfile:
 #read_file_copy = read_file[:10] 
 print("Daten sind geladen ...\n")
 
-
 print("Beginne LogIn in Kafka ...\n")
 logging.basicConfig(level=logging.INFO)
 
