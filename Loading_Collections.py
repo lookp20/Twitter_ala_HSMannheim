@@ -4,6 +4,7 @@ from pymongo import MongoClient
 import json
 import pandas as pd 
 import os
+from tqdm import tqdm
 
 # Stelle Verbindung zur DB her
 client = MongoClient("mongodb://0.0.0.0:27017/")
@@ -12,9 +13,9 @@ all_dbs = client.list_database_names()
 
 test_db = client["test"]
 list_path = os.listdir("/Volumes/LOOK_USB_C/Tweets_Collection")
-tweets_collection = list_path[500:550]
+tweets_collection = list_path[:50]
 
-for item in tweets_collection:
+for item in tqdm(tweets_collection):
     Collection = test_db[item[:-5]]
     with open("/Volumes/LOOK_USB_C/Tweets_Collection/" + item) as jf:
         file_data = json.load(jf)
