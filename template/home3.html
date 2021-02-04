@@ -2,36 +2,42 @@
 
 {% block content %}
     <p></p></br>
-    <h1>{% block title %} Show me my Tweets{% endblock %}</h1>
+    <h1>{% block title %} Willkommen beim Zwitschern {% endblock %}</h1>
     <p></p></br>
+    
+    <form action="/" method="POST">
+        <input name="text">
+        <input type="submit">
+    </form>
 
 
-    {% for item1 in Große_Liste %}
+
+  
     <!-- {% for item2 in item1 %} -->
 
     <table class="table">
         <thead>
         <tr>
             <th scope="col"> </th>
-            <th scope="col">{{item1[0]}}</th>
+            <th scope="col">{{Name}}</th>
         </tr>
         </thead>
         <tbody>
         <tr>
             <th scope="row">Content</th>
-            <td>{{item1[1][0]}}</td>   
+            <td>{{content}}</td>   
         </tr>
         <tr>     
             <th scope="row">Likes</th>
-            <td>{{item1[2][0]}}</td> 
+            <td>{{Likes}}</td> 
         </tr> 
         <tr>  
             <th scope="row">Shares</th>
-            <td>{{item1[3][0]}}</td>
+            <td>{{Shares}}</td>
         </tr> 
         <tr>
             <th scope="row">Date</th>
-            <td colspan="2">{{item1[4][0]}}</td>
+            <td colspan="2">{{DateTime]}}</td>
         </tr> 
         </tbody>
     </table>
@@ -40,7 +46,7 @@
 
   
     <!-- {% endfor %} -->
-    {% endfor %}
+   
 
 
 {% endblock %}
