@@ -22,3 +22,7 @@ Bauen Sie einen Filter ein, der Tweets mit unerwünschten Worten in einen spezie
 Statistik-Abfragen wie wer hat die meisten Follower oder die meisten Tweets
 Vorschläge für IDs, die interessant sein könnten (weil die Follower diesen folgen oder die selbst verfolgten User diesen folgen)
 Evtl. Einbindung von Flink[tweets.csv]
+
+Daten:
+Twitter_Follower: http://snap.stanford.edu/data/twitter_combined.txt.gz
+Promi-Tweets: https://dataverse.harvard.edu/api/access/datafile/:persistentId?persistentId=doi:10.7910/DVN/JBXKFD/F4FULO
