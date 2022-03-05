@@ -25,4 +25,5 @@ Evtl. Einbindung von Flink[tweets.csv]
 
 Daten:
 Twitter_Follower: http://snap.stanford.edu/data/twitter_combined.txt.gz
+
 Promi-Tweets: https://dataverse.harvard.edu/api/access/datafile/:persistentId?persistentId=doi:10.7910/DVN/JBXKFD/F4FULO
